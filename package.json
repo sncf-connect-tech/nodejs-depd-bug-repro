@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-depd-bug-repro",
+  "version": "0.1.0",
+  "dependencies": {
+    "body-parser": "^1.19.2"
+  },
+  "scripts": {
+    "build": "esbuild app.ts app.ts --bundle --tsconfig=tsconfig.json --outdir=dist/ --platform=node && babel dist/app.js --out-file dist/bundle.js",
+    "start": "node dist/bundle.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "@tsconfig/node14": "^1.0.1",
+    "core-js": "^3.21.1",
+    "esbuild": "^0.14.25"
+  }
+}
